@@ -29,4 +29,22 @@ USER_ERRORS = {
         "ru": "Логин и пароль были введены неверно.",
         "status_code": 401,
     },
+    2006: {
+        "en": "The Username must be set",
+        "ru": "Имя пользователя должно быть установлено",
+        "uz": "Foydalanuvchi nomi o'rnatilishi kerak",
+        "status_code": 400,
+    },
+    2007: {
+        "en": "Superuser must have is_staff=True.",
+        "ru": "Суперпользователь должен иметь is_staff=True.",
+        "uz": "Superuser is_staff=True bo'lishi kerak",
+        "status_code": 400,
+    },
+    2008: {
+        "en": "Superuser must have is_superuser=True.",
+        "ru": "Суперпользователь должен иметь is_superuser=True.",
+        "uz": "Superuser is_superuser=True bo'lishi kerak",
+        "status_code": 400,
+    }
 }

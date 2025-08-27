@@ -270,3 +270,6 @@ CORS_ALLOW_HEADERS = [
     "access-control-allow-origin",
     "access-control-allow-credentials",
 ]
+
+
+AUTH_USER_MODEL = "users.User"

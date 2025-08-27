@@ -60,3 +60,9 @@ class CardChoices(models.TextChoices):
     FAILED = "failed", "Muvaffaqiyatsiz"
     APPROVED = "approved", "Tasdiqlangan"
     DELIVERED = "delivered", "Yetkazib berildi"
+
+
+class RoleCodes(models.TextChoices):
+    ADMIN = "admin"
+    CLIENT = "client"
+    WORKER = "worker"
