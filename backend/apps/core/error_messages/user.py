@@ -46,5 +46,5 @@ USER_ERRORS = {
         "ru": "Суперпользователь должен иметь is_superuser=True.",
         "uz": "Superuser is_superuser=True bo'lishi kerak",
         "status_code": 400,
-    }
+    },
 }

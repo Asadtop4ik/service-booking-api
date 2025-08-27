@@ -34,4 +34,28 @@ CORE_ERRORS = {
         "ru": "Предоставленный объект не найден",
         "status_code": 400,
     },
+    1007: {
+        "uz": "Siz bu buyurtma uchun to‘lov qilolmaysiz.",
+        "ru": "Вы не можете оплатить этот заказ.",
+        "en": "You cannot make a payment for this order.",
+        "status_code": 400,
+    },
+    1008: {
+        "uz": "Buyurtma jarayonda emas.",
+        "ru": "Заказ не в процессе.",
+        "en": "The order is not in process.",
+        "status_code": 400,
+    },
+    1009: {
+        "en": "already processed",
+        "ru": "уже обработано",
+        "uz": "allaqachon qayta ishlangan",
+        "status_code": 400,
+    },
+    1010: {
+        "en": "Payment marked as SUCCESS",
+        "ru": "Платеж отмечен как УСПЕХ",
+        "uz": "To'lov MUVAFFAQIYAT sifatida belgilandi",
+        "status_code": 200,
+    },
 }

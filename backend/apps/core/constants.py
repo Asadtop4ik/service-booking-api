@@ -66,3 +66,15 @@ class RoleCodes(models.TextChoices):
     ADMIN = "admin"
     CLIENT = "client"
     WORKER = "worker"
+
+
+class OrderStatus(models.TextChoices):
+    PENDING = "pending", "Pending"
+    PAID = "paid", "Paid"
+    CANCELED = "canceled", "Canceled"
+
+
+class PaymentStatus(models.TextChoices):
+    PENDING = "pending", "Pending"
+    SUCCESS = "success", "Success"
+    FAILED = "failed", "Failed"

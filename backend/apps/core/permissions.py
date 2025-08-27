@@ -1,3 +1,4 @@
+from rest_framework import permissions
 from rest_framework.permissions import AllowAny, BasePermission
 
 
@@ -23,3 +24,13 @@ PERMISSION_MAP = {
     "list": [AllowAny],
     "retrieve": [AllowAny],
 }
+
+
+class IsAdmin(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role == "admin"
+
+
+class IsWorker(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role == "worker"

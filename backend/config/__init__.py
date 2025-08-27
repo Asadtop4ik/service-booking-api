@@ -4,6 +4,8 @@ from django.urls import include, path
 APP_CONFIGS = [
     "users",
     "dictionary",
+    "order",
+    "payment",
 ]
 
 

@@ -4,6 +4,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 User = get_user_model()
 
+
 class UserRegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 
@@ -15,7 +16,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(
             username=validated_data["username"],
             password=validated_data["password"],
-            role="client"
+            role="client",
         )
         return user
 
@@ -32,15 +33,13 @@ class LoginSerializer(serializers.Serializer):
 
     def validate(self, attrs):
         from django.contrib.auth import authenticate
-        user = authenticate(
-            username=attrs["username"],
-            password=attrs["password"]
-        )
+
+        user = authenticate(username=attrs["username"], password=attrs["password"])
         if not user:
             raise serializers.ValidationError("Invalid credentials")
         refresh = RefreshToken.for_user(user)
         return {
             "refresh": str(refresh),
             "access": str(refresh.access_token),
-            "user": UserSerializer(user).data
+            "user": UserSerializer(user).data,
         }

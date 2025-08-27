@@ -62,6 +62,8 @@ INTERNAL_APPS = [
     "apps.core",
     "apps.dictionary",
     "apps.users",
+    "apps.order",
+    "apps.payment",
 ]
 
 # JWT specific applications
