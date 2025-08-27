@@ -1,0 +1,16 @@
+.vscode/
+__pycache__
+**/__pycache__
+*.pyc
+
+db.sqlite3
+
+static/
+media/
+
+venv/
+*.env
+uploads
+**/.$Untitled Diagram.drawio.bkp
+.ruff_cache
+.env
