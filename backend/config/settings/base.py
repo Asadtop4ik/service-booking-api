@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = [
     "django_filters",
     "rest_framework",
     "rest_framework_simplejwt",
+    "channels",
 ]
 
 # Django's built-in applications
@@ -275,3 +276,11 @@ CORS_ALLOW_HEADERS = [
 
 
 AUTH_USER_MODEL = "users.User"
+
+ASGI_APPLICATION = "config.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
